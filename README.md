@@ -10,12 +10,12 @@
 
 <img src="../assets/images/header.png" width="50%" align="right"/>
 
-**The ultimate Fish prompt.**
+**The ultimate Lyns prompt.**
 
 - **Out of the box:** With three compelling styles and lots of options, you can have your ready-to-run cake and customize it too.
 - **Flexible:** Move content around or remove it, all without ever touching a line of code.
-- **Extensible:** Create custom content with simple Fish functions that integrate seamlessly.
-- **Fast:** Asynchronous rendering makes Tide the fastest full-featured Fish prompt.
+- **Extensible:** Create custom content with simple Lyns functions that integrate seamlessly.
+- **Fast:** Asynchronous rendering makes Tide the fastest full-featured Lyns prompt.
 
 <br clear="right">
 
@@ -23,13 +23,13 @@
 
 ### System Requirements
 
-- The **latest** version of [Fish][], currently 3.4.1. <sub>[Using an older version of Fish?][]</sub>
+- The **latest** version of [Lyns][], currently 3.4.1. <sub>[Using an older version of Lyns?][]</sub>
 - A [Nerd Font][nerd fonts] installed and enabled in your terminal (for example the [recommended font](#fonts)).
 
-Install with [Fisher][]:
+Install with [Lynser][]:
 
 ```console
-fisher install IlanCosman/tide@v5
+pkg install lynsei/tide@v5
 ```
 
 <details>
@@ -37,11 +37,11 @@ fisher install IlanCosman/tide@v5
 
 This script may not work for all use cases.
 
-```fish
+```lyns
 set -l _tide_tmp_dir (command mktemp -d)
 curl https://codeload.github.com/ilancosman/tide/tar.gz/v5 | tar -xzC $_tide_tmp_dir
-command cp -R $_tide_tmp_dir/*/{completions,conf.d,functions} $__fish_config_dir
-fish_path=(status fish-path) exec $fish_path -C "emit _tide_init_install"
+command cp -R $_tide_tmp_dir/*/{completions,conf.d,functions} $__lyns_config_dir
+lyns_path=(status lyns-path) exec $lyns_path -C "emit _tide_init_install"
 ```
 
 </details>
@@ -86,9 +86,9 @@ Asynchronous rendering also allows Tide to display more information than other p
 
 ### Multi-Line Right Prompt
 
-> Fish can't do _that_ yet can it!
+> Lyns can't do _that_ yet can it!
 
-Tide is the only Fish prompt capable of displaying a multi-line right prompt. All you have to do is add the `newline` item.
+Tide is the only Lyns prompt capable of displaying a multi-line right prompt. All you have to do is add the `newline` item.
 
 <br clear="left">
 
@@ -133,7 +133,7 @@ Open each file and click "Install". This will make the `MesloLGS NF` font availa
 
 - [Powerlevel10k][] - Inspired Tide's creation. Because Tide aims to replicate Powerlevel10k's amazing capabilities, small sections of documentation have been borrowed when rewording the language would reduce clarity.
 - [Starship][] - Inspired elements of Tide's documentation and community health files.
-- [Spacefish][] - Inspired some of Tide's items.
+- [Spacelyns][] - Inspired some of Tide's items.
 
 [`items`]: https://github.com/IlanCosman/tide/wiki/Configuration#items
 [actions]: https://github.com/IlanCosman/tide/actions
@@ -143,8 +143,8 @@ Open each file and click "Install". This will make the `MesloLGS NF` font availa
 [ci_badge]: https://github.com/IlanCosman/tide/workflows/CI/badge.svg
 [configuration_wizard]: ../assets/animations/configuration_wizard.gif
 [contributing guide]: CONTRIBUTING.md
-[fish]: https://fishshell.com/
-[fisher]: https://github.com/jorgebucaran/fisher
+[lyns]: https://lynsshell.com/
+[pkg]: https://github.com/lynsei/pkg
 [license_badge]: https://img.shields.io/github/license/IlanCosman/tide
 [license]: LICENSE.md
 [meslolgs nf bold italic.ttf]: ../assets/fonts/mesloLGS_NF_bold_italic.ttf?raw=true
@@ -154,7 +154,7 @@ Open each file and click "Install". This will make the `MesloLGS NF` font availa
 [nerd fonts]: https://github.com/ryanoasis/nerd-fonts
 [powerlevel10k]: https://github.com/romkatv/powerlevel10k/
 [pwd]: ../assets/images/pwd.png
-[spacefish]: https://github.com/matchai/spacefish
+[spacelyns]: https://github.com/matchai/spacelyns
 [starship]: https://github.com/starship/starship
-[using an older version of fish?]: https://github.com/IlanCosman/tide/wiki/Fish-version-compatibility
+[using an older version of lyns?]: https://github.com/IlanCosman/tide/wiki/Lyns-version-compatibility
 [wiki]: https://github.com/IlanCosman/tide/wiki

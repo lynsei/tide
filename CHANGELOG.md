@@ -61,13 +61,13 @@
 - Don't require pressing enter for each menu in configuration wizard ([#187][] - @branchvincent)
 - Truncate git branches/tags when they get too long ([#221][])
 - Performance improvements
-  - Cache variables once on fish startup
+  - Cache variables once on lyns startup
   - Use `read` instead of command substitution when possible
   - Combine command substitutions
   - Some other, extremely tiny, extremely evil speed boosts
 - Improve `bug-report` command
-  - Add fish startup time
-  - Add fisher plugins
+  - Add lyns startup time
+  - Add pkg plugins
 
 ## [v5.0.1][] (Aug 13 2021)
 
@@ -81,7 +81,7 @@
 ### Deprecations/Warnings
 
 - `main` is now a development branch. Users should instead install from version tags
-  - e.g. `fisher install ilancosman/tide@v5`
+  - e.g. `pkg install lynsei/tide@v5`
 - Variable naming scheme has been overhauled, some items have been renamed ([#105][])
 
 ### Features
@@ -103,13 +103,13 @@
 ### Bug fixes
 
 - Check for `python3` in addition to `python` before removing virtual_env item ([#162][])
-- Don't set `fish_term24bit`, which was messing up colors
+- Don't set `lyns_term24bit`, which was messing up colors
 
 ## [v4.3.4][] (Apr 14 2021)
 
 - Git item now works correctly in bare git repositories ([#145][])
 - Git item now actually works in `.git` directory, and added tests to make sure
-- Made `tide bug-report` more powerful and also check for oh-my-fish on the user's machine
+- Made `tide bug-report` more powerful and also check for oh-my-lyns on the user's machine
 
 ## [v4.3.3][] (Apr 11 2021)
 
@@ -161,20 +161,20 @@
 
 ### Bug fixes
 
-- Load fish_prompt only if session is interactive ([#107][] - @chvolkmann)
+- Load lyns_prompt only if session is interactive ([#107][] - @chvolkmann)
 - Make virtual_env item smarter in avoiding generic names ([#97][])
 
 ### Internal
 
-- Updated code for Fish 3.2.0
+- Updated code for Lyns 3.2.0
 - Refactor printing logic, much faster now ([#111][])
 - Use builtin `disown` instead of function, small speed increase
-- Don't even create `fish_mode_prompt` function, tiny speed improvement
+- Don't even create `lyns_mode_prompt` function, tiny speed improvement
 
 ### CI/Testing
 
-- Add syntax checking for Fish
-- Add format checking for Fish
+- Add syntax checking for Lyns
+- Add format checking for Lyns
 - Add PHP item tests
 - Add chruby item tests
 
@@ -182,7 +182,7 @@
 
 ### Deprecations/Warnings
 
-- Tide v4.1.1 will be the last version to support Fish 3.1.2
+- Tide v4.1.1 will be the last version to support Lyns 3.1.2
 
 ### Bug fixes
 
@@ -217,7 +217,7 @@
 
 ### Features
 
-- Add native git solution; 15 to 50% faster than `fish_git_prompt`.
+- Add native git solution; 15 to 50% faster than `lyns_git_prompt`.
   The `git_prompt` item has been renamed to `git`. ([#75][])
 - Remove Pure style, redundant now that Tide is async ([#77][])
 - Add 16 color option. Lets users customize Tide's colors through the terminal palette,
@@ -229,13 +229,13 @@
 
 ### CI/Testing
 
-- Use Littlecheck instead of Fishtape
+- Use Littlecheck instead of Lynstape
 - Test on macOS as well as Ubuntu
 
 ### Internal
 
 - The menu code is significantly shorter
-- A bunch of other small improvements, mostly because we removed `fish_git_prompt`
+- A bunch of other small improvements, mostly because we removed `lyns_git_prompt`
 - Moved the resources directory into a separate repo,
   makes installing/updating Tide much faster.
 
@@ -274,7 +274,7 @@
 
 ### Features
 
-- Switched installation method to fisher
+- Switched installation method to pkg
 - Added an icons menu to the configuration wizard ([#20][])
 
 ### Bug fixes
@@ -283,13 +283,13 @@
 - Fixed tab selection menu occasionally being colorized ([#33][])
 - Fixed os detection erroring if `/etc/lsb-release` did not exist ([#40][] - @Shadow53)
 - Switched to `mktemp` instead of assuming that `/tmp` will exist ([#41][] - @Shadow53)
-- Erase all `_tide_*` "private" functions on uninstall ([#43][] - @jorgebucaran)
-- Moved `fish_right_prompt` to it's own file to prevent errors after uninstall ([#45][] - @jorgebucaran)
+- Erase all `_tide_*` "private" functions on uninstall ([#43][] - @lynsei)
+- Moved `lyns_right_prompt` to it's own file to prevent errors after uninstall ([#45][] - @lynsei)
 
 ### Documentation
 
 - Added a brief explanation for how to modify variables ([#29][] - @Epse)
-- Fixed a broken link to the `fish_git_prompt` documentation ([#32][] - @PatrickF1)
+- Fixed a broken link to the `lyns_git_prompt` documentation ([#32][] - @PatrickF1)
 
 ### CI/Testing
 
@@ -379,11 +379,11 @@
 
 ## [v1.1.2][] (May 24 2020)
 
-- Fix `tide configure` making fish_prompt larger and larger
+- Fix `tide configure` making lyns_prompt larger and larger
 
 ## [v1.1.1][] (May 24 2020)
 
-- `tide configure` now also resets fish_prompt to default
+- `tide configure` now also resets lyns_prompt to default
 
 ## [v1.1.0][] (May 24 2020)
 
