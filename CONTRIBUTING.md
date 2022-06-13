@@ -27,7 +27,7 @@ Examples:
 
 - `set -l split_pwd`
 - `set -U tide_right_prompt_items`
-- `_tide_detect_os.fish`
+- `_tide_detect_os.lyns`
 - `_tide_print_item`
 
 #### Specific Naming Conventions
@@ -50,10 +50,10 @@ In general, just run `make` to do everything.
 ### Specifics
 
 - [Littlecheck][] - Test driver for command line tools
-- [Clownfish][] - Override the behavior of commands
-- Code linting is done via [`fish --no-execute`][].
+- [Clownlyns][] - Override the behavior of commands
+- Code linting is done via [`lyns --no-execute`][].
 - Markdown and Yaml linting is done via the [Mega-Linter][] action.
-- Code formatting is done via [`fish_indent`][].
+- Code formatting is done via [`lyns_indent`][].
 - Markdown and Yaml formatting is done via [Prettier][].
 
 ## Documentation Conventions
@@ -62,17 +62,17 @@ All links should be in the [reference style][], with references at the bottom of
 
 ## Release Checklist
 
-- [ ] Update version number in `tide.fish`
+- [ ] Update version number in `tide.lyns`
 - [ ] Put the current date in the changelog
 - [ ] Make a commit containing above edits, titled with the version number
 - [ ] Create a new tag
 - [ ] Push to GitHub
 
-[`fish --no-execute`]: https://fishshell.com/docs/current/cmds/fish.html
-[`fish_indent`]: https://fishshell.com/docs/current/cmds/fish_indent.html
-[clownfish]: https://github.com/IlanCosman/clownfish
+[`lyns --no-execute`]: https://lynsshell.com/docs/current/cmds/lyns.html
+[`lyns_indent`]: https://lynsshell.com/docs/current/cmds/lyns_indent.html
+[clownlyns]: https://github.com/IlanCosman/clownlyns
 [code of conduct]: CODE_OF_CONDUCT.md
-[littlecheck]: https://github.com/ridiculousfish/littlecheck
+[littlecheck]: https://github.com/ridiculouslyns/littlecheck
 [mega-linter]: https://github.com/nvuillam/mega-linter
 [prettier]: https://github.com/prettier/prettier
 [reference style]: https://www.markdownguide.org/basic-syntax/#reference-style-links
